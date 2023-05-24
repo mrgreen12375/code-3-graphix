@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.margin {
+  margin-top: 150px;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#headerLogo {
+  background-image: url(https://cdn.pixabay.com/photo/2015/04/16/21/32/flame-726268__340.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: black;
+  height: 70px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  font-family: cinzel;
+  margin-left: 90px;
+}
+
+.title span {
+  margin: 40px 0px 0px 10px;
+}
+
+.loginNav h5 {
+  opacity: 0;
+}
+
+/* Header */
+
+/*nav*/
+
+.navBar {
+  display: flex;
+  color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+}
+  
+nav ul a{
+  text-decoration: none;
+}
+  
+nav li{
+  display: inline-block;
+  margin-right: 20px;
+}
+  
+nav li:hover {
+  font-weight: normal;
+  cursor: pointer;
+}
+  
+nav a:link {
+  color: white;
+}
+  
+nav a:hover {
+  color: white;
+}
+  
+nav a:visited {
+  color: white;
+}
+  
+nav a:visited:hover {
+  color: white;
+}
+
+/*nav*/
+
+/*home*/
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0px 250px 0px 250px;
+}
+
+.home p {
+  margin: -10px 0px 30px 0px;
+}
+
+.home img {
+  height: 200px;
+  width: 1000px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  font-family: cinzel;
+  margin: 0px 20px -90px 20px;
+}
+
+.steps h3 {
+  position: relative;
+  bottom: 20px;
+}
+
+.steps h2 {
+  position: relative;
+  bottom: 100px;
+  font-size: 90px;
+}
+
+.steps p {
+  margin: 0px 0px 0px 5px;
+}
+
+.stepLink {
+  font-weight: bold;
+  color: blue;
+  text-decoration: none;
+  margin: 0px 0px 0px 5px;
+}
+
+.stepLink:hover {
+  color: rgb(100, 100, 248);
+  cursor: pointer;
+}
+
+/*slide show*/
+
+.slideShow {
+  min-height: 30vh;
+  display: grid;
+  place-items: center;
+}
+
+.slider {
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 18);
+  animation: scroll 25s linear infinite;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-250px * 9));
+  }
+}
+
+.slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+
+.slideImage {
+  width: 100%;
+  transition: transform 1%;
+}
+
+.slideImage:hover {
+  transform: translateZ(20px);
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%,
+  rgba(255,255,255,0) 100%);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+/*slide show*/
+
+/*home*/
+
+/*gallery*/
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px 250px 0px 250px;
+}
+
+.galleryImage {
+  height: 200px;
+  width: 200px;
+  margin: 0px 10px 5px 0px;
+}
+
+.galleryImage:hover {
+  cursor: zoom-in;
+  transform: scale(2);
+}
+
+/*product*/
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px 250px 0px 250px;
+}
+
+.productImage {
+  height: 250px;
+  width: 200px;
+  margin: 0px 30px 5px 30px;
+}
+
+/*.productImage:hover {
+  opacity: 0.5;
+}*/
+
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 20px;
+  margin: 0px 30px 0px 30px;
+  font-weight: bold;
+}
+
+.price a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(74, 74, 74);
+  padding: 2px 20px 2px 20px;
+  border-radius: 3px;
+}
+
+.price a:hover {
+  background-color: grey;
+}
+
+/*product*/
+
+/* Contact */
+
+.buttons {
+  background-color: #504f4f;
+  color: white;
+  border-radius: 2%;
+  width: 150px;
+  height: 50px;
+  margin-bottom: 50px;
+}
+
+.buttons:hover {
+  background-color:rgb(107, 107, 107);
+  cursor: pointer;
+}
+
+/* Contact */
+
+/* About */
+
+.about {
+  margin: 0px 350px 0px 350px;
+}
+
+.about-laser {
+  float: left;
+  height: 200px;
+  width: 200px;
+  margin: 15px;
+  border-radius: 50%;
+}
+
+/* About */
+
+/* Login */
+
+.loginContainer {
+  margin: 10px;
+}
+
+.nameLabel {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: -10px;
+}
+
+.nameInput {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 6px 110px 6px 10px;
+}
+
+.emailInput {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 6px 110px 6px 10px;
+  margin-left: 35px;
+}
+
+.passwordInput {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 6px 110px 6px 10px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginButton {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(74, 74, 74);
+}
+
+.loginButton:hover {
+  background-color: grey;
+}
+
+.logInstead {
+  text-decoration: none;
+  color: rgb(60, 60, 60);
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.logInstead:hover {
+  font-size: 20px;
+}
